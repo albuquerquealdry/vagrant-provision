@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/aldry/repository/vagrant-provision/dev-environments/k8s-enviroments/kubeMaestro","disabled":false,"__vagrantfile":true}}}
