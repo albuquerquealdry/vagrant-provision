@@ -3,6 +3,6 @@ Vagrant.configure("2") do |config|
     config.vm.network :forwarded_port, guest: PORT, host: PORT
     config.vm.provision "docker" do |d|    
         d.pull_images "PROVIDER/IMAGE:TAGVERSION"
-        config.vm.provision "shell", inline:  "docker run TAGAPLICATION -p PORT:PORT -i PROVIDER/IMAGE "
+        config.vm.provision "shell", inline:  "docker run -p PORT:PORT -i PROVIDER/IMAGE "
         end
     end
