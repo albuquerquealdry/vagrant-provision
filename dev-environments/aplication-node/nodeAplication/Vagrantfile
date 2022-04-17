@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/xenial64"
     config.vm.network :forwarded_port, guest: PORT, host: PORT
     config.vm.provision "docker" do |d|    
-        d.pull_images "APPLICATIONIMAGE"
+        d.pull_images "PROVIDER/IMAGE:TAGVERSION"
         config.vm.provision "shell", inline:  "docker run TAGAPLICATION -p PORT:PORT -i IMAGE "
         end
     end
